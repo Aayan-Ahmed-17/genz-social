@@ -7,7 +7,7 @@ function CreatePost({ addPost, setCurrentPage }) {
     e.preventDefault();
     const trimmedContent = content.trim();
     if (trimmedContent) {
-      addPost({ content: trimmedContent });
+      addPost({ author: 'CurrentUser', content: trimmedContent });
       setContent('');
       setCurrentPage('feed');
     }

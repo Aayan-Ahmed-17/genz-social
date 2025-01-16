@@ -4,7 +4,7 @@ import Post from './Post';
 function Feed({ posts, onLike, onComment }) {
   return (
     <div className="space-y-8">
-      {posts.map(post => (
+      {posts && posts.map(post => (
         <Post 
           key={post._id} 
           post={post} 
