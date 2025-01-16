@@ -112,6 +112,7 @@ import Header from "./components/Header";
 import Feed from "./components/Feed";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import CreatePost from "./components/CreatePost"
 import { API_KEY } from "./utilis/constant";
 
 function App() {
@@ -137,6 +138,9 @@ function App() {
         {currentPage === 'feed' && <Feed posts={posts} setPosts={setPosts} user={user} />}
         {currentPage === 'login' && <Login setUser={setUser} setCurrentPage={setCurrentPage} />}
         {currentPage === 'register' && <Register setUser={setUser} setCurrentPage={setCurrentPage} />}
+        {currentPage === 'create' && user && (
+          <CreatePost setPosts={setPosts} posts={posts} setCurrentPage={setCurrentPage} />
+        )}
       </main>
     </div>
   );
