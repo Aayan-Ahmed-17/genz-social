@@ -1,4 +1,4 @@
-const BASE_URL = 'https://tender-celina-dev-anonymous-b670cee7.koyeb.app/api/v1/';
+const BASE_URL = 'https://embarrassed-ingunna-dev-aayan-e22732d0.koyeb.app/api/v1';
 
 export const api = {
   register: (userData) => 
@@ -23,18 +23,18 @@ export const api = {
       credentials: 'include'
     }).then(res => res.json()),
 
-  createPost: (content) => 
-    fetch(`${BASE_URL}/createPost`, {
-      method: 'POST',
-      credentials: 'include',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content })
-    }).then(res => res.json()),
+  // createPost: (content) => 
+  //   fetch(`${BASE_URL}/createPost`, {
+  //     method: 'POST',
+  //     credentials: 'include',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({ content })
+  //   }).then(res => res.json()),
 
-  getPosts: () => 
-    fetch(`${BASE_URL}/post`, {
-      credentials: 'include'
-    }).then(res => res.json()),
+  // getPosts: () => 
+  //   fetch(`${BASE_URL}/post`, {
+  //     credentials: 'include'
+  //   }).then(res => res.json()),
 
   likePost: (postId) => 
     fetch(`${BASE_URL}/like`, {

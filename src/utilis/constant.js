@@ -1,1 +1,1 @@
-export const API_KEY = "https://tender-celina-dev-anonymous-b670cee7.koyeb.app/api/v1"
+export const API_KEY = "https://embarrassed-ingunna-dev-aayan-e22732d0.koyeb.app/api/v1"
