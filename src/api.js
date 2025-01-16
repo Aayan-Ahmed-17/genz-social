@@ -1,4 +1,4 @@
-const BASE_URL = 'https://tender-celina-dev-anonymous-b670cee7.koyeb.app/api/v1';
+const BASE_URL = 'https://tender-celina-dev-anonymous-b670cee7.koyeb.app/api/v1/';
 
 export const api = {
   register: (userData) => 

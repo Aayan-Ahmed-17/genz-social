@@ -14,6 +14,7 @@ function App() {
       const json = await res.json()
 
       setPosts(json)
+      console.log(API_KEY + '/post')
     }
     fetchPost()
   }, []);
