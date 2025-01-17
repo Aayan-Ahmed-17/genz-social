@@ -49,7 +49,7 @@
 import React, { useState } from "react";
 import { API_KEY } from "../utilis/constant";
 
-const CreatePost = ({ setPosts, posts }) => {
+const CreatePost = ({ setCurrentPage, setPosts, posts }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
@@ -60,10 +60,10 @@ const CreatePost = ({ setPosts, posts }) => {
     try {
       const response = await fetch(`${API_KEY}/createpost`, {
         method: "POST",
-        credentials: "include", 
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({ title, description }),
       });
@@ -77,6 +77,7 @@ const CreatePost = ({ setPosts, posts }) => {
       setTitle("");
       setDescription("");
       setError("");
+      setCurrentPage("feed");
     } catch (err) {
       setError(err.message || "Failed to create post. Please try again.");
       console.error("Error:", err);
