@@ -64,7 +64,6 @@ const CreatePost = ({ setPosts, posts }) => {
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
-          "Authorization": `Bearer ${accessToken}` // Include the access token here
         },
         body: JSON.stringify({ title, description }),
       });
