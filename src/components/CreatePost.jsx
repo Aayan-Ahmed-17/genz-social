@@ -60,14 +60,14 @@ const CreatePost = ({ setPosts, posts }) => {
     try {
       const response = await fetch(`${API_KEY}/createpost`, {
         method: "POST",
-        credentials: "include",
+        credentials: "include", 
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
+          "Accept": "application/json",
+          "Authorization": `Bearer ${accessToken}` // Include the access token here
         },
         body: JSON.stringify({ title, description }),
       });
-
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || "Failed to create post");
