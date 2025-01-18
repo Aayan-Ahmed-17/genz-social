@@ -1,1 +1,1 @@
-export const API_KEY = "http://localhost:3000/api/v1"
+export const API_KEY = "https://dominant-heidie-dev-aayan-3abf8ada.koyeb.app/api/v1"
